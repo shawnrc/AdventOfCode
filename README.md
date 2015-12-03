@@ -10,7 +10,7 @@ From the site:
  sharp as they are for a beginner who is just learning to code. Each puzzle calls upon 
  different skills and has two parts that build on a theme.
 
-I'm having a lot of fun with it, and definitely recommend you check it out!
+I'm having a lot of fun with it, and definitely recommend you check it out\!
 
 I've included solutions to the problems with the input data for the sake of testing new solve methods.
 --
