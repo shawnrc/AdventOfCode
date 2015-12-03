@@ -27,12 +27,38 @@ def solve_p1():
         to the east.
       - ^>v< delivers presents to 4 houses in a square, including twice to the
         house at his starting/ending location.
-        ^v^v^v^v^v delivers a bunch of presents to some very lucky children at
+      - ^v^v^v^v^v delivers a bunch of presents to some very lucky children at
         only 2 houses.
 
     :return: houses Number of houses that have received at least one present
     :rtype: int
+
+    This is going to be kind of a naive solution - maybe I'll store coordinates and check if
+    I've visited before?
     """
 
     path = AdventData.day_three
+    houses = 1
+    x = y = 0
+    visited = [(0, 0)]
 
+    for move in path:
+
+        if move is '^':
+            y += 1
+        elif move is '>':
+            x += 1
+        elif move is 'v':
+            y -= 1
+        elif move is '<':
+            x -= 1
+
+        pos = (x, y)
+        if pos not in visited:
+            visited.append(pos)
+            houses += 1
+
+    return houses
+
+
+print(solve_p1())
