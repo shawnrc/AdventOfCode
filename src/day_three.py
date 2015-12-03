@@ -97,6 +97,12 @@ def solve_p1_2():
         '<': lambda x, y: (x-1, y),
     }
 
+    for move in path:
+        x, y = switch[move](x, y)
+        visited.add((x, y))
+
+    return len(visited)
+
 
 def solve_p2():
     """
@@ -125,4 +131,4 @@ def solve_p2():
     """
 
 
-print(solve_p1_1())
+print(solve_p1_2())
