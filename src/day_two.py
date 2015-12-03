@@ -41,7 +41,7 @@ def solve_p2() -> int:
         to wrap the present plus 1*1*10 = 10 feet of ribbon for the bow, for a
         total of 14 feet.
 
-    How many total feet of ribbon should they order?
+    How many *total feet* of ribbon should they order?
 
     Solution: 3842356
     """
