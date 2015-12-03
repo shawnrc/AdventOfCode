@@ -11,8 +11,6 @@ def main():
 
     import days
 
-    for module in days.__dict__.values():
-        try:
-            for
+
 
 main()
