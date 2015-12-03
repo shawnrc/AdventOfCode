@@ -59,6 +59,46 @@ def solve_p1():
     return houses
 
 
+def solve_p1_1():
+    """
+    This isn't really even a better solution, it's just more stupid.
+    """
+
+    path = AdventData.day_three
+    houses = 1
+    x = y = 0
+    visited = [(0, 0)]
+
+    switch = {
+        '^': lambda x, y: (x, y+1),
+        '>': lambda x, y: (x+1, y),
+        'v': lambda x, y: (x, y-1),
+        '<': lambda x, y: (x-1, y),
+    }
+
+    for move in path:
+        x, y = switch[move](x, y)
+        if (x, y) not in visited:
+            visited.append((x, y))
+            houses += 1
+
+    return houses
+
+
+def solve_p1_2() -> int:
+    path = AdventData.day_three
+    x = y = 0
+    visited = {(x, y)}
+
+    switch = {
+        '^': lambda x, y: (x, y+1),
+        '>': lambda x, y: (x+1, y),
+        'v': lambda x, y: (x, y-1),
+        '<': lambda x, y: (x-1, y),
+    }
+
+
+
 def solve_p2() -> int:
     """
     --- Part Two ---
@@ -86,4 +126,4 @@ def solve_p2() -> int:
     """
 
 
-print(solve_p1())
+print(solve_p1_1())
