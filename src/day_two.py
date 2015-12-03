@@ -5,7 +5,7 @@
 from AdventData import AdventData
 
 
-def solve_p1():
+def solve_p1() -> int:
     boxes = AdventData.day_two.split('\n')
 
     areas = []
@@ -18,7 +18,7 @@ def solve_p1():
     return sum(areas)
 
 
-def solve_p2():
+def solve_p2() -> int:
     """
     --- Part Two ---
 
