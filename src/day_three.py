@@ -85,7 +85,7 @@ def solve_p1_1():
     return houses
 
 
-def solve_p1_2() -> int:
+def solve_p1_2():
     path = AdventData.day_three
     x = y = 0
     visited = {(x, y)}
@@ -98,8 +98,7 @@ def solve_p1_2() -> int:
     }
 
 
-
-def solve_p2() -> int:
+def solve_p2():
     """
     --- Part Two ---
 
