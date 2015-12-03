@@ -57,7 +57,7 @@ class PartOne:
             dims.sort()
             areas += area + dims[0] * dims[1]
 
-        return sum(areas)
+        return areas
 
 
 class PartTwo:
