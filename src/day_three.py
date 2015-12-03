@@ -128,7 +128,45 @@ def solve_p2():
 
     :return:
     :rtype: int
+
+    Solution: 2639
     """
+    path = AdventData.day_three
+    santa, robot = (0, 0), (0, 0)
+    visited = {santa}
+    switch = {
+        '^': lambda x, y: (x, y+1),
+        '>': lambda x, y: (x+1, y),
+        'v': lambda x, y: (x, y-1),
+        '<': lambda x, y: (x-1, y),
+    }
+
+    for i in range(len(path)):
+        if i % 2:
+            robot = switch[path[i]](*robot)
+            visited.add(robot)
+        else:
+            santa = switch[path[i]](*santa)
+            visited.add(santa)
+
+    return len(visited)
 
 
-print(solve_p1_2())
+def solve_p2_1():
+    path = AdventData.day_three
+    movers = [(0, 0), (0, 0)]
+    visited = {movers[0]}
+    switch = {
+        '^': lambda x, y: (x, y+1),
+        '>': lambda x, y: (x+1, y),
+        'v': lambda x, y: (x, y-1),
+        '<': lambda x, y: (x-1, y),
+    }
+
+    for i in range(len(path)):
+        movers[i % 2] = switch[path[i]](*movers[i % 2])
+        visited.add(movers[i % 2])
+
+    return len(visited)
+
+print(solve_p2_1())
