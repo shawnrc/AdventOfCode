@@ -31,6 +31,8 @@ class PartOne:
       - ))) and )())()) both result in floor -3.
 
     To what floor do the instructions take Santa?
+
+    Solution: 138
     """
     @staticmethod
     def solve():
@@ -70,6 +72,8 @@ class PartTwo:
       - ()()) causes him to enter the basement at character position 5.
 
     What is the position of the character that causes Santa to first enter the basement?
+
+    Solution: 1771
     """
     @staticmethod
     def solve():

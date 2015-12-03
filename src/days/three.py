@@ -28,14 +28,14 @@ class PartOne:
       - ^v^v^v^v^v delivers a bunch of presents to some very lucky children at
         only 2 houses.
 
-    :return: houses Number of houses that have received at least one present
-    :rtype: int
-
-    This is going to be kind of a naive solution - maybe I'll store coordinates and check if
-    I've visited before?
+    Solution: 2565
     """
     @staticmethod
     def solve():
+        """
+        This is going to be kind of a naive solution - maybe I'll store coordinates and check if
+        I've visited before?
+        """
 
         path = day_three
         houses = 1
