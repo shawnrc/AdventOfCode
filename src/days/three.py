@@ -131,7 +131,7 @@ class PartTwo:
     Solution: 2639
     """
     @staticmethod
-    def solve_p2():
+    def solve():
 
         path = day_three
         santa, robot = (0, 0), (0, 0)
@@ -154,7 +154,7 @@ class PartTwo:
         return len(visited)
 
     @staticmethod
-    def solve_p2_1():
+    def solve_one():
         path = day_three
         movers = [(0, 0), (0, 0)]
         visited = {movers[0]}
