@@ -1005,6 +1005,8 @@ class AdventData():
 29x4x8
 21x2x22
 14x12x8"""
+    day_two_p1_sol = 1606483
+    day_two_p2_sol = 3842356
     day_three = None
     day_four = None
-    day_three = None
+    day_five = None
