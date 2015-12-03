@@ -169,4 +169,5 @@ def solve_p2_1():
 
     return len(visited)
 
+
 print(solve_p2_1())
