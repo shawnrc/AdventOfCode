@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 --- Day 3: Perfectly Spherical Houses in a Vacuum ---
 
@@ -31,13 +32,11 @@ class PartOne:
     Solution: 2565
     """
     @staticmethod
-    def solve():
+    def solve(path=day_three):
         """
         This is going to be kind of a naive solution - maybe I'll store coordinates and check if
         I've visited before?
         """
-
-        path = day_three
         houses = 1
         x = y = 0
         visited = [(0, 0)]
@@ -61,12 +60,10 @@ class PartOne:
         return houses
 
     @staticmethod
-    def solve_one():
+    def solve_one(path=day_three):
         """
         This isn't really even a better solution, it's just more stupid.
         """
-
-        path = day_three
         houses = 1
         x = y = 0
         visited = [(0, 0)]
@@ -87,8 +84,7 @@ class PartOne:
         return houses
 
     @staticmethod
-    def solve_two():
-        path = day_three
+    def solve_two(path=day_three):
         x = y = 0
         visited = {(x, y)}
 
@@ -102,6 +98,18 @@ class PartOne:
         for move in path:
             x, y = switch[move](x, y)
             visited.add((x, y))
+
+        return len(visited)
+
+    @staticmethod
+    def solve_three(path=day_three):
+        """h/t to /u/ratmatrix for the dict lambda"""
+        santa = (0, 0)
+        visited = {santa}
+
+        for move in path:
+            santa = (lambda x, y, d: {'^': (x, y+1), '>': (x+1, y), 'v': (x, y-1), '<': (x-1, y)}[d])(*santa, move)
+            visited.add(santa)
 
         return len(visited)
 
@@ -131,9 +139,8 @@ class PartTwo:
     Solution: 2639
     """
     @staticmethod
-    def solve():
+    def solve(path=day_three):
 
-        path = day_three
         santa, robot = (0, 0), (0, 0)
         visited = {santa}
         switch = {
@@ -154,8 +161,7 @@ class PartTwo:
         return len(visited)
 
     @staticmethod
-    def solve_one():
-        path = day_three
+    def solve_one(path=day_three):
         movers = [(0, 0), (0, 0)]
         visited = {movers[0]}
         switch = {

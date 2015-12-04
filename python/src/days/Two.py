@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 --- Day 2: I Was Told There Would Be No Math ---
 

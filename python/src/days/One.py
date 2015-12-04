@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 --- Day 1: Not Quite Lisp ---
 
@@ -102,3 +103,15 @@ class PartTwo:
                 return pos
 
         return pos + 1
+
+    @staticmethod
+    def solve_three(path=day_one):
+        """Yes I know this is dumb shut up"""
+        pos = floor = 0
+        while floor != -1:
+            floor += {'(': 1}.get(path[pos], -1)
+            pos += 1
+
+        []
+
+        return pos
