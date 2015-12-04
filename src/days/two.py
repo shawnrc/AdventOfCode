@@ -48,14 +48,14 @@ class PartOne:
 
     @staticmethod
     def solve_one():
-        boxes = day_two.split('\n')
+        boxes = [[int(d) for d in box.split('x')] for box in day_two.split('\n')]
 
         areas = 0
         for box in boxes:
-            l, w, h = dims = [int(x) for x in box.split('x')]
+            l, w, h = box
             area = (2 * l * w) + (2 * w * h) + (2 * h * l)
-            dims.sort()
-            areas += area + dims[0] * dims[1]
+            box.sort()
+            areas += area + box[0] * box[1]
 
         return areas
 
